@@ -16,7 +16,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
+![](https://res.cloudinary.com/dz209s6jk/image/upload/v1625753687/Challenges/wfczmy0nrltpwqyaovg6.jpg)
 
 ### Links
 

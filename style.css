@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Space Mono;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+
+h1{
+    margin: 100px auto 0px;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: hsl(183, 100%, 15%);
+}
+
+h1:nth-child(2){
+    margin: 5px auto 80px;
+}
+
+@media (min-width:781px){
+    .container{
+        width: 800px;
+    }
+}
+
+@media (min-width:991px){
+    .container{
+        width: 900px;
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        width: 970px;
+    }
+}
+
+.container{
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 10%);
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+}
+
+
+.container :is(.result, .calculate){
+    width: 50%;
+}
+
+.container .calculate .bill,
+.container .calculate .tip{
+    margin-bottom: 40px;
+}
+
+.container .calculate .bill .bill-input,
+.container .calculate .number-people .numberPeople-input{
+    width: 100%;
+    height: 45px;
+    padding: 0 15px 0 30px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: right;
+    outline: none;
+    border: 2px solid hsl(189, 41%, 97%);
+    border-radius: 4px;
+    background-color: hsl(189, 41%, 97%);
+    transition: all .2s;
+}
+
+.container .calculate :is(.bill .bill-input, .number-people .numberPeople-input)::placeholder{
+    color: hsl(186, 14%, 43%);
+}
+
+.container .calculate :is(.bill .bill-input, .number-people .numberPeople-input):focus{
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.container .calculate :is(.bill > p + div ,.number-people > p + div){
+    position: relative;
+} 
+
+.container .calculate :is(.fa-user, .fa-dollar-sign){
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: hsl(184, 14%, 56%);
+}
+
+.container .calculate :is(.tip > p, .bill > p, .number-people > p){
+    text-transform: capitalize;
+    color: hsl(186, 14%, 43%);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.container .calculate .tip .tips{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+
+}
+
+.container .calculate .tip .tips > :is(button, div){
+    width: 135px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.container .calculate .tip .tips > div{
+    width: 135px;
+    height: 50px;
+    position: relative;
+}
+
+.container .calculate .tip .tips > button:hover{
+    background-color: hsl(172, 45%, 63%);
+    color: hsl(183, 100%, 15%);
+}
+
+.container .calculate .tip .tips > button:active{
+    transform: scale(.94);
+}
+
+.container .calculate .tip .tips > button.active{
+    background-color: hsl(172, 67%, 45%);
+}
+
+.container .calculate .tip .tips > div > input{
+    border-radius: 4px;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    width: 135px;
+    height: 50px;
+    background-color: hsl(189, 41%, 97%);
+    text-align: center;
+    border: 2px solid hsl(189, 41%, 97%);
+    outline: none;
+    color: hsl(183, 100%, 15%);
+    transition: all .2s;
+}
+
+.container .calculate .tip .tips > div{
+    background-color: transparent;
+}
+
+.container .calculate .tip .tips > div > input:focus{
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.container .result{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .result :is(.total-container, .tip-amount-container){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .result :is(.tip-amount-container .title, .total-container .title){
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.container .result .per{
+    color: hsl(184, 14%, 56%);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.container .result :is(.tip-amount, .total){
+    font-size: 45px;
+    font-weight: 600;
+    color: hsl(172, 67%, 45%);
+}
+
+.container .result .reset{
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 60px;
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    transition: all .2s;
+}
+
+.container .result .reset.pointer{
+    pointer-events: none;
+    background-color: hsl(186, 14%, 43%);
+}
+
+.container .result .reset:hover{
+    background-color: hsl(172, 45%, 63%);
+}
+
+.container .result .reset:active{
+    transform: scale(.96);
+}
+
+.container :is(.bill-error, .numberPeople-error, .custom-error){
+    position: absolute;
+    font-size: 14px;
+    color: red;
+    right: 5px;
+    top: -25px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: none;
+}
+
+
+.container .custom-error{
+    top: 50px;
+}
+
+@media (max-width:1201px){
+    .container .calculate .tip .tips > :is(button, input) {
+        max-width: 123px;
+    }
+}
+
+@media (max-width:991px){
+    .container{
+        width: calc(100% - 40px);
+        padding: 40px 30px;
+    }
+    .container .calculate .tip .tips > :is(button, input) {
+        max-width: 164px;
+    }
+}
+
+@media (max-width:860px){
+    .container{
+        flex-direction: column;
+        padding: 40px 30px;
+    }
+    .container :is(.calculate, .result){
+        width: 100%;
+    }
+    .container .calculate :is(.tip > p, .bill > p, .number-people > p) {
+        margin-bottom: 15px;
+    }
+    .container .result {
+        gap: 10px;
+    }
+    .container .result .reset {
+        margin: 0;
+    }
+}
+
+@media (max-width:691px){
+    .container{
+        width: 100%;
+    }
+    h1 {
+        margin: 50px auto 0px;
+    }
+    h1:nth-child(2) {
+        margin: 5px auto 40px;
+    }
+}
+
+@media (max-width:410px){
+    .container .calculate .tip .tips {
+        gap: 0;
+        row-gap: 10px;
+        width: 100%;
+    }
+    .container .calculate .tip .tips > :is(button, .tips > div > input) {
+        min-width: 100%;
+    }
+    .container .calculate .tip :is(.tips > div, .tips > div > input){
+        width: 100%;
+    }
+    .container .result :is(.total-container, .tip-amount-container) {
+        align-items: start;
+        flex-direction: column;
+    }
+    .container .calculate .bill .bill-input, .container .calculate .number-people .numberPeople-input {
+        margin-top: 15px;
+    }
+    .container :is(.bill-error, .numberPeople-error, .custom-error) {
+        top: -10px;
+    }
+    .container :is(.custom-error) {
+        top: 55px;
+    }
+}
+
+@media (max-width:500px){
+    .container .calculate .tip .tips > :is(button, div) {
+        width: 160px;
+    }
+    .container .calculate .tip .tips > div > input{
+        width: 100%;
+    }
+}

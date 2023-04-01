@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=DM+Sans:wght@400;500;700&family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,800;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tip calculator app</title>
+</head>
+<body>
+    <h1>spli</h1>
+    <h1>tter</h1>
+    <div class="container">
+        <div class="calculate">
+            <div class="bill">
+                <p>bill</p>
+                <div>
+                    <input type="text" class="bill-input" placeholder="0">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <div class="bill-error"></div>
+                </div>
+            </div>
+            <div class="tip">
+                <p>select tip %</p>
+                <div class="tips">
+                    <button class="five-perc" value="0.05">5%</button>
+                    <button class="ten-perc" value="0.1">10%</button>
+                    <button class="fifteen-perc" value="0.15">15%</button>
+                    <button class="twentyFive-perc" value="0.25">25%</button>
+                    <button class="fifty-perc" value="0.5">50%</button>
+                    <div>
+                        <input type="text" class="custom-input" placeholder="Custom">
+                        <div class="custom-error">custom error</div>
+                    </div>
+                </div>
+            </div>
+            <div class="number-people">
+                <p>Number of People</p>
+                <div>
+                    <input type="text" class="numberPeople-input" placeholder="0">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="numberPeople-error"></div>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <div class="tip-amount-container">
+                <div>
+                    <div class="title">tip amount</div>
+                    <div class="per">/ person</div>
+                </div>
+                <div class="tip-amount">$<span class="amount">0.00</span></div>
+            </div>
+            <div class="total-container">
+                <div>
+                    <div class="title">total</div>
+                    <div class="per">/ person</div>
+                </div>
+                <div class="total">$<span class="total-per-person">0.00</span></div>
+            </div>
+            <button class="reset pointer">reset</button>
+        </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
